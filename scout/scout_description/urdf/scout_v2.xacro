@@ -98,4 +98,9 @@
 
     <!-- Gazebo definitions  -->
     <xacro:include filename="$(find scout_description)/urdf/scout_v2.gazebo" />
+    
+  <xacro:include filename="$(find robosense_description)/urdf/RS-16.urdf.xacro"/>
+  <xacro:RS-16 parent="base_link" name="robosense" topic="/rslidar_points" hz="20" samples="900" gpu="false">
+    <origin xyz="0 0 0.4" rpy="0 0 0" />
+  </xacro:RS-16>
 </robot>
