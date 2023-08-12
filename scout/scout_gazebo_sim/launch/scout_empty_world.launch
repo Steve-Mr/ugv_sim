@@ -2,10 +2,13 @@
 
     <arg name="robot_namespace" default="/"/>
 
+    <env name="GAZEBO_MODEL_PATH" value="$(find map2gazebo)/models:$(optenv GAZEBO_MODEL_PATH)" />
+
     <!-- Load the surrounding environment into Gazebo -->
-    <arg name="world_name" default="$(find scout_gazebo_sim)/worlds/postoffice.world"/>
-    <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="world_name" default="$(find scout_gazebo_sim)/worlds/reflector.world"/>
+    <include file="$(find scout_gazebo_sim)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find map2gazebo)/worlds/map.sdf"/>
+        <!-- <arg name="world_name" value="$(arg world_name)"/> -->
         <arg name="paused" value="false"/>
         <arg name="use_sim_time" value="true"/>
         <arg name="gui" value="true"/>
