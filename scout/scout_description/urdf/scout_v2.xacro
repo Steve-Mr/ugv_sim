@@ -111,9 +111,9 @@
         <origin rpy="0 0 1.5708" xyz="0 0 0.5"/>
     </xacro:realsense_R200> -->
 
-    <xacro:include filename="$(find realsense_ros_gazebo)/xacro/depthcam.xacro"/>
+    <!-- <xacro:include filename="$(find realsense_ros_gazebo)/xacro/depthcam.xacro"/>
     <xacro:realsense_R200 sensor_name="camera" parent_link="base_link" rate="30.0">
         <origin rpy="0 0 0" xyz="0 0 0.5"/>
-    </xacro:realsense_R200>
+    </xacro:realsense_R200> -->
 
 </robot>
